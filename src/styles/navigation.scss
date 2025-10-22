@@ -1,0 +1,107 @@
+@import "./variables";
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary-color;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-secondary;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: $primary-color;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  .download-btn {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: $text-light !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(96, 165, 250, 0.4);
+      background: linear-gradient(135deg, $accent-color, $primary-color);
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background: $text-light;
+      transition: all 0.3s ease;
+      border-radius: 3px;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+      }
+    }
+  }
+}
