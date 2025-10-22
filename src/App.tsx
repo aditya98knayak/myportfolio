@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Navigation, Hero, About, Skills, Projects, Experience, Contact, Footer } from './components'
+import { Navigation, Hero, About, Skills, Experience, Contact, Footer } from './components'
 import "@styles/main.scss";
 
 function App() {
