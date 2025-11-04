@@ -14,14 +14,14 @@ const Contact: React.FC = () => {
           </div>
           <div className="contact-item">
             <strong>GitHub</strong>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-              github.com/aditya98knayak
+            <a href="https://github.com/aditya98knayak" target="_blank" rel="noopener noreferrer">
+              Github
             </a>
           </div>
           <div className="contact-item">
             <strong>LinkedIn</strong>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-              linkedin.com/in/adityaknayak
+            <a href="https://linkedin.com/in/adityaknayak" target="_blank" rel="noopener noreferrer">
+              LinkedIn
             </a>
           </div>
         </div>
